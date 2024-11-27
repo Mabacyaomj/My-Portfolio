@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  
+  <style>
+    .sticky-header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      width: 100%;
+      background: inherit;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    .custom-font-1 {
+      font-family: "Raleway", sans-serif;
+    }
+    .custom-font-2 {
+      font-family: "Urbanist", sans-serif;
+    }
+    #backToTopBtn {
+      display: none;
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      width: 40px;
+      height: 40px;
+      border: none;
+      border-radius: 50%;
+      background-color: #f5a623;
+      color: #fff;
+      cursor: pointer;
+      opacity: 0.8;
+      transition: opacity 0.3s ease, background-color 0.3s ease;
+    }
+    #backToTopBtn:hover {
+      opacity: 1;
+      background-color: #f57f20;
+    }
+  </style>
+</head>
+<body class="custom-font-1">
+  <!-- Header with Navbar -->
+  <header class="sticky-header">
+    <div class="bg-gradient-to-r from-pink-300 via-purple-300 to-indigo-300 text-white">
+      <div class="container mx-auto px-6 py-3">
+        <div class="flex justify-between items-center">
+          <a href="#" class="text-2xl font-semibold custom-font-1">My Portfolio</a>
+          <button id="menu-toggle" class="block lg:hidden text-white focus:outline-none">
+            <svg class="h-6 w-6 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+          <nav class="hidden lg:flex space-x-4 custom-font-2">
+            <a href="#introduction" class="hover:underline hover:text-pink-300">Introduction</a>
+            <a href="#about" class="hover:underline hover:text-pink-300">About Me</a>
+            <a href="#skills" class="hover:underline hover:text-pink-300">Skills</a>
+            <a href="#projects" class="hover:underline hover:text-pink-300">Projects</a>
+            <a href="#contact" class="hover:underline hover:text-pink-300">Contact</a>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Introduction Section -->
+  <section id="introduction" class="relative bg-cover bg-center bg-no-repeat py-16" style="background-color:whitesmoke;">
+    <div class="w-full h-full bg-white bg-opacity-70 flex items-center justify-center">
+      <img src="./assets/images/introduction.png" alt="Introduction Image" class="w-full h-auto object-cover">
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="bg-white py-16">
+    <div class="mx-auto max-w-screen-2xl px-4 py-16 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:h-screen">
+        <div class="relative h-64 sm:h-80 lg:h-full">
+          <img alt="My picture" src="./assets/images/mined.png" class="absolute inset-0 h-full w-full object-cover" />
+        </div>
+        <div class="flex flex-col justify-center bg-gray-50 p-8 sm:p-16 lg:p-24">
+          <h2 class="text-2xl font-bold sm:text-3xl text-pink-600">Who Am I?</h2>
+          <p class="mt-4 text-gray-700">
+            I’m Marry Jane B. Mabacyao, a passionate and enthusiastic beginner in the field of Information Technology. Currently pursuing a Bachelor of Science in Information Technology at Informatics College Manila, I am excited to bring my diverse background in customer service and sales into the IT world. My experiences have honed my communication, active listening, and critical thinking skills—qualities that I’m eager to apply and further develop in this rapidly evolving industry.
+          </p>
+          <h3 class="text-xl font-semibold mt-8 text-pink-600">Why IT?</h3>
+          <p class="mt-4 text-gray-700">
+            My fascination with technology and its impact on everyday life motivated me to transition into the IT field. I’ve observed firsthand how technology is reshaping industries, and I am driven to be part of that transformation. I am committed to learning and growing in this field, with a particular interest in data science, AI, and networking. My recent studies and certifications, such as the "Data Science & AI Bootcamp" and "Optimizing Data Ingestion with Spark in Microsoft Fabric," have further fueled my passion for technology.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Work Experience Section -->
+  <section id="work-experience" class="bg-gray-50 py-16">
+    <div class="container mx-auto px-6 text-center">
+      <h2 class="text-2xl font-bold sm:text-3xl text-pink-600">Work Experience</h2>
+      <div class="mt-10 text-left">
+        <ul class="list-disc ml-6">
+          <li>
+            <strong class="text-pink-500">Cashier, Parco Department Store (2003-2004)</strong>
+            <p class="text-gray-600">Managed customer transactions efficiently and accurately. Developed a keen eye for detail and honed organizational skills.</p>
+          </li>
+          <li>
+            <strong class="text-pink-500">Sales Lady, SM Mega Mall (2004-2005)</strong>
+            <p class="text-gray-600">Assisted customers and managed inventory, enhancing multitasking and customer service abilities. Built a strong foundation in customer relations and problem-solving.</p>
+          </li>
+          <li>
+            <strong class="text-pink-500">Unit Manager, AVON Direct Selling Co. (2014-2017)</strong>
+            <p class="text-gray-600">Recruited and motivated a team of sellers, focusing on customer acquisition and retention. Strengthened leadership, communication, and team management skills.</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="bg-white py-16">
+    <div class="container mx-auto px-6">
+      <div class="text-center">
+        <h1 class="text-2xl font-semibold text-pink-600 md:text-3xl">My Skills</h1>
+        <p class="mt-3 text-gray-700">A brief overview of my technical and soft skills:</p>
+      </div>
+      <div class="mt-10 grid grid-cols-1 gap-10 lg:grid-cols-3">
+        <div>
+          <h2 class="font-semibold text-lg text-pink-500 custom-font-2">Technical Skills</h2>
+          <p class="mt-2 text-gray-600">MS Office, Data Management, Networking</p>
+        </div>
+        <div>
+          <h2 class="font-semibold text-lg text-pink-500 custom-font-2">Soft Skills</h2>
+          <p class="mt-2 text-gray-600">Critical Thinking, Active Listening, Strong Work Ethic</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+<section id="projects" class="bg-gray-50 py-16">
+  <div class="container mx-auto px-6 text-center">
+    <h2 class="text-2xl font-bold sm:text-3xl text-pink-600">Projects</h2>
+    <p class="mt-4 text-gray-700">Here are some of the projects I've worked on:</p>
+    <div class="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      <!-- Project Card 1 -->
+      <div class="bg-white p-6 rounded-lg shadow-md">
+        <img src="./assets/images/games.png" alt="JS Interaction Games" class="w-full h-40 object-cover object-center mb-6 rounded-lg">
+        <h3 class="text-lg font-semibold text-pink-500">JS Interaction Games</h3>
+        <p class="text-gray-600 mt-3">A collection of interactive games built using JavaScript to demonstrate various coding techniques and concepts.</p>
+      </div>
+      
+      <!-- Project Card 2 -->
+      <div class="bg-white p-6 rounded-lg shadow-md">
+        <img src="./assets/images/TTT.png" alt="Tik Tak Toe Modification" class="w-full h-40 object-cover object-center mb-6 rounded-lg">
+        <h3 class="text-lg font-semibold text-pink-500">Tik Tak Toe Modification</h3>
+        <p class="text-gray-600 mt-3">A modified version of the classic Tic-Tac-Toe game with enhanced features and a more dynamic gameplay experience.</p>
+      </div>
+      
+      <!-- Project Card 3 -->
+      <div class="bg-white p-6 rounded-lg shadow-md">
+        <img src="./assets/images/fluppy.png" alt="Flappy Bird Modification" class="w-full h-40 object-cover object-center mb-6 rounded-lg">
+        <h3 class="text-lg font-semibold text-pink-500">Flappy Bird Modification</h3>
+        <p class="text-gray-600 mt-3">An improved version of the Flappy Bird game with additional features and updated graphics to enhance gameplay.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+ <!-- Career Goals Section -->
+<!-- Career Goals Section -->
+<section id="career-goals" class="bg-gray-50 py-16">
+  <div class="container mx-auto px-6 text-center">
+    <h2 class="text-2xl font-bold sm:text-3xl text-pink-600">My Career Goals</h2>
+    <p class="mt-4 text-gray-700">
+      I am driven to become an integral part of the IT industry, contributing my skills in data science, AI, and networking to innovate and drive progress. My long-term goal is to be a leader in this field, inspiring and guiding others through technology’s ever-evolving landscape.
+    </p>
+  </div>
+
+
+<!-- Styled Horizontal Rule -->
+<div class="relative my-16">
+  <div class="absolute inset-0 flex items-center">
+    <hr class="flex-grow border-t-2 border-gray-300">
+    <div class="px-4">
+      <h2 class="text-2xl font-bold sm:text-3xl text-pink-600">Contacts</h2>
+    </div>
+    <hr class="flex-grow border-t-2 border-gray-300">
+  </div>
+</div>
+
+</section>
+
+  <!-- Footer with Contact Information -->
+  <footer id="contact" class="bg-gray-900 text-white py-6">
+    <div class="container mx-auto px-6 text-center">
+      <h2 class="text-2xl font-semibold text-pink-600">Get in Touch</h2>
+      <p class="mt-4">Email: <a href="mailto:balubarmj20@gmail.com" class="underline text-pink-400">balubarmj20@gmail.com</a> | Phone: +63 939 188 9268</p>
+    </div>
+  </footer>
+
+  <button id="backToTopBtn" title="Go to top">↑</button>
+
+  <!-- JavaScript to handle scroll and back to top button -->
+  <script>
+    const backToTopBtn = document.getElementById("backToTopBtn");
+
+    window.onscroll = function () {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        backToTopBtn.style.display = "block";
+      } else {
+        backToTopBtn.style.display = "none";
+      }
+    };
+
+    backToTopBtn.addEventListener("click", function () {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    });
+
+    document.getElementById("menu-toggle").addEventListener("click", function () {
+      const nav = document.querySelector("nav");
+      nav.classList.toggle("hidden");
+    });
+  </script>
+</body>
+</html>
